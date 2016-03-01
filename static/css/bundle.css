@@ -39,7 +39,7 @@
  * 헤더 기본 색정의
  */
 .view-login header.global, .view-login header.global-new, .view-login header.global.slim, .view-passwordreset header.global, .view-passwordreset header.global-new, .view-passwordreset header.global.slim, .view-register header.global, .view-register header.global-new, .view-register header.global.slim, body header.global, body header.global-new, body header.global.slim{
-    background-color: #cecece !important;
+    background-color: #ffffff !important;
     border: 0 none;
     border-radius: 0 !important;
     box-shadow: none;
