@@ -4,32 +4,17 @@
 
 <%! from microsite_configuration.templatetags.microsite import platform_name %>
 
+<%block name="navigation_top">
 
-<header class="navbar-static-top" role="header" id="header">
+aaaa
 
-    <div class="container">
+</%block>
 
-        <div class="navbar-header">
+<%block name="navigation_logo">
+  ${platform_name()}
+</%block>
 
-            <a class="navbar-brand" href="/">
-                <img style="height:25px;" class="img" src="static/themes/iocaux/images/img/logo.png" alt="${platform_name()}">
-            </a>
-
-            <a data-target="#aside-right" class="aside-toggle navbar-toggle" href="#">
-                <i class="navbar-icon fa fa-bars"></i>
-            </a>
-
-            <a data-target="#aside-left" class="aside-toggle navbar-toggle" href="#">
-                <i class="navbar-icon fa fa-bars"></i>
-            </a>
-
-        </div>
-
-        <nav class="navbar-collapse collapse">
-            <img style="margin-top:15px;" class="img pull-right" src="static/themes/iocaux/images/img/b4.png">
-
-        </nav>
-
-    </div>
-
-</header>
+## When unauthenticated, only show the about page link
+<%block name="navigation_global_links">
+bbbbb
+</%block>
