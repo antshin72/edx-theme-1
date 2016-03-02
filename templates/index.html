@@ -59,23 +59,38 @@
 
   </div>
 
-  <section class="container">
-    <section class="highlighted-courses">
 
-      % if settings.FEATURES.get('COURSES_ARE_BROWSABLE'):
-        <section class="courses">
-            <ul class="courses-listing">
-            %for course in courses:
-              <li class="courses-listing-item">
-                <%include file="course.html" args="course=course" />
-              </li>
-            %endfor
-            </ul>
+
+  <div style="background-color:#0075bc;" class="jumbotron">
+
+        <section class="container">
+
+            <section class="highlighted-courses">
+
+              % if settings.FEATURES.get('COURSES_ARE_BROWSABLE'):
+                <section class="courses">
+                    <ul class="courses-listing">
+                    %for course in courses:
+                      <li class="courses-listing-item">
+                        <%include file="course.html" args="course=course" />
+                      </li>
+                    %endfor
+                    </ul>
+                </section>
+              % endif
+
+            </section>
+
+            <div style="margin-top:60px;margin-bottom:20px;" class="row">
+                <div class="col-md-12 text-center">
+                    <img class="img" src="${static.url('themes/{theme_name}/images/img/b1.png'.format(theme_name=settings.THEME_NAME))}">
+                </div>
+
+            </div>
+
+
         </section>
-      % endif
-
-    </section>
-  </section>
+  </div>
 
 
   <div style="background-color:#fff;" class="jumbotron">
