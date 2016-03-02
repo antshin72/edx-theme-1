@@ -17,9 +17,9 @@
 %>
 
 <section class="home" style="background-color: #0075bc">
-  <header>
+  <header style="background: url('${static.url('themes/{theme_name}/images/img/bg.jpg'.format(theme_name=settings.THEME_NAME))}') no-repeat 50% 50%;">
 
-      <div style="padding:0px;background: url('${static.url('themes/{theme_name}/images/img/bg.jpg'.format(theme_name=settings.THEME_NAME))}') no-repeat 50% 50%;" class="jumbotron parallax">
+      <div style="padding:0px;" class="jumbotron parallax">
         <div class="container">
             <img src="${static.url('themes/{theme_name}/images/img/t4.png'.format(theme_name=settings.THEME_NAME))}" class="img">
             <img src="${static.url('themes/{theme_name}/images/img/m8.png'.format(theme_name=settings.THEME_NAME))}" class="img slider">
