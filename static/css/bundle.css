@@ -78,7 +78,12 @@
 }
 
 
-
+/**
+ * footer 폰트 색깔 설정
+ */
+.links li a{
+    color: #111111 !important;
+}
 
 
 
