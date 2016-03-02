@@ -68,7 +68,7 @@
  * visiual 영역 색 정의
  */
 .content-wrapper > .home > header{
-    background: #3c556c none repeat scroll 0 center;
+    background: #fff none repeat scroll 0 center;
     border: medium none;
     box-shadow: none;
     height: auto;
