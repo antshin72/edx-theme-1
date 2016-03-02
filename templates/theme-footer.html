@@ -6,16 +6,12 @@
 <footer class="global" role="footer" style="background-color:#e9e9e9;">
   <div class="footer-container">
     <ul class="links">
-      %if settings.MKTG_URL_LINK_MAP.get('ABOUT'):
       <li>
         <a id="about" href="${marketing_link('ABOUT')}">CAUx 소개</a>
       </li>
-      %endif
-      %if settings.MKTG_URL_LINK_MAP.get('FAQ'):
       <li>
-        <a id="faq" href="${marketing_link('FAQ')}">전체강의보기</a>
+        <a id="faq" href="/courses">전체강의보기</a>
       </li>
-      %endif
       %if settings.MKTG_URL_LINK_MAP.get('CONTACT'):
       <li>
         <a id="contact" href="${marketing_link('CONTACT')}">서비스문의</a>
