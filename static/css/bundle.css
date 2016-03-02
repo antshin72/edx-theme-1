@@ -65,6 +65,14 @@
 }
 
 /**
+ * content-wrapper 배경 구성
+ */
+.content-wrapper{
+    background-color: #ffffff;
+}
+
+
+/**
  * visiual 영역 색 정의
  */
 .content-wrapper > .home > header{
