@@ -7,12 +7,16 @@
 <head>
   <meta v="a">
   <meta charset="UTF-8">
+  <!-- wiki test -->
   {% block title %}<title>{% platform_name %}</title>{% endblock %}
 
  <link rel="icon" type="image/x-icon" href="{% favicon_path %}" />
 
   {% compressed_css 'style-vendor' %}
   {% compressed_css 'style-main' %}
+  {% compressed_css 'style-app' %}
+  {% compressed_css 'style-app-extend1' %}
+  {% compressed_css 'style-app-extend2' %}
   {% compressed_css 'style-course-vendor' %}
   {% compressed_css 'style-course' %}
 
