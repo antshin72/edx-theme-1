@@ -31,7 +31,7 @@ header.global, header.global-new, header.global.slim {
 			}
 
 			a {
-				.size(@logo-img-width, 36px);
+				.size(@logo-img-width, 25px);
 				.text-hide();
 
 				background-image: url(@logo-img-path);
@@ -119,7 +119,8 @@ header.global, header.global-new, header.global.slim {
 		ol.user {
 			margin: 0;
 
-			> li.primary > a {
+			> li.primary > a,
+			> li.primary > button {
 				.ionisx-btn(@color-primary, @white);
 
 				border-radius: 0;
@@ -151,7 +152,7 @@ header.global, header.global-new, header.global.slim {
 					letter-spacing: normal;
 				}
 
-				> span.avatar {
+				.user-image-frame {
 					display: none;
 					background: none;
 				}
@@ -181,7 +182,8 @@ header.global, header.global-new, header.global.slim {
 					padding: 2px 8px;
 					color: @color-primary;
 
-					> a {
+					> a,
+					> button {
 						border: 0 none;
 						outline: none;
 						padding: 0;
@@ -198,7 +200,8 @@ header.global, header.global-new, header.global.slim {
 						background-color: @color-primary;
 						color: @white;
 
-						> a {
+						> a,
+						> button {
 							color: inherit;
 						}
 					}
