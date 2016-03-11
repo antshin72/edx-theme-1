@@ -16,7 +16,7 @@
 
 %>
 
-<section class="home bg-info">
+<section class="home">
   <header>
 
       <div class="jumbotron parallax parallax_index">
@@ -65,9 +65,9 @@
 
   <div class="jumbotron bg-info">
 
-        <section class="courses-container">
+        <div class="courses-container">
 
-            <section class="highlighted-courses">
+            <div class="highlighted-courses">
 
               % if settings.FEATURES.get('COURSES_ARE_BROWSABLE'):
                 <section class="courses">
@@ -81,16 +81,17 @@
                 </section>
               % endif
 
-            </section>
-
-            <div class="row">
-                <div class="col-md-12 text-center">
-                    <p><a href="/courses"><img class="img" src="${static.url('themes/{theme_name}/images/img/b1.png'.format(theme_name=settings.THEME_NAME))}"></a></p>
-                </div>
-
             </div>
 
-        </section>
+	    <div class="row">
+		<div class="col-md-12 text-center">
+		    <p><a href="/courses"><img class="img" src="${static.url('themes/{theme_name}/images/img/b1.png'.format(theme_name=settings.THEME_NAME))}"></a></p>
+		</div>
+
+	    </div>
+
+        </div>
+
   </div>
 
 
