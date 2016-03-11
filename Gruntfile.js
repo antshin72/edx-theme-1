@@ -1,37 +1,37 @@
 'use strict';
 
-module.exports = function (grunt) {
-    require('time-grunt')(grunt);
-    require('load-grunt-tasks')(grunt);
+module.exports = function( grunt ) {
+    require( 'time-grunt' )( grunt );
+    require( 'load-grunt-tasks' )( grunt );
 
-    var config = {
+	var config = {
         src: 'src',
         dest: 'static',
         bower: 'bower_components'
     };
 
-    grunt.initConfig({
+	grunt.initConfig( {
         c: config,
 
-        // ## //
+		// ## //
 
-        watch: {
+		watch: {
             less: {
-                files: ['<%= c.src %>/less/**/*.less'],
-                tasks: ['less', 'autoprefixer', 'cssmin', 'bless']
+                files: [ '<%= c.src %>/less/**/*.less' ],
+                tasks: [ 'less', 'autoprefixer', 'cssmin', 'bless' ]
             }
         },
 
-        // ## //
+		// ## //
 
-        jshint: {
+		jshint: {
             node: {
                 options: {
                     jshintrc: true
                 },
                 files: {
                     src: [
-                        'Gruntfile.js'
+                    'Gruntfile.js'
                     ]
                 }
             }
@@ -43,7 +43,7 @@ module.exports = function (grunt) {
             all: {
                 files: {
                     src: [
-                        'Gruntfile.js'
+                    'Gruntfile.js'
                     ]
                 }
             }
@@ -54,7 +54,7 @@ module.exports = function (grunt) {
         less: {
             theme: {
                 options: {
-                    paths: ['<%= c.bower %>']
+                    paths: [ '<%= c.bower %>' ]
                 },
                 files: {
                     '<%= c.dest %>/css/bundle.css': '<%= c.src %>/less/main.less'
@@ -67,11 +67,11 @@ module.exports = function (grunt) {
         autoprefixer: {
             theme: {
                 options: {
-                    browsers: ['last 2 versions', 'ie 9']
+                    browsers: [ 'last 2 versions', 'ie 9' ]
                 },
                 files: {
                     '<%= c.dest %>/css/bundle.css': [
-                        '<%= c.dest %>/css/bundle.css'
+                    '<%= c.dest %>/css/bundle.css'
                     ]
                 }
             }
@@ -86,7 +86,7 @@ module.exports = function (grunt) {
                 },
                 files: {
                     '<%= c.dest %>/css/bundle.css': [
-                        '<%= c.dest %>/css/bundle.css'
+                    '<%= c.dest %>/css/bundle.css'
                     ]
                 }
             }
@@ -99,12 +99,12 @@ module.exports = function (grunt) {
                 options: {
                     report: 'min'
                 },
-                files: [{
+                files: [ {
                     expand: true,
                     cwd: '<%= c.dest %>/css',
                     dest: '<%= c.dest %>/css',
-                    src: ['*.css']
-                }]
+                    src: [ '*.css' ]
+                } ]
             }
         },
 
@@ -115,14 +115,14 @@ module.exports = function (grunt) {
                 options: {
                     report: 'min'
                 },
-                files: [{
+                files: [ {
                     expand: true,
                     cwd: '<%= c.dest %>/images/',
                     dest: '<%= c.dest %>/images/',
                     src: [
-                        '**/*.{png,jpg,gif}'
+                    '**/*.{png,jpg,gif}'
                     ]
-                }]
+                } ]
             }
         },
 
@@ -130,40 +130,40 @@ module.exports = function (grunt) {
 
         copy: {
             fontawesome: {
-                files: [{
+                files: [ {
                     expand: true,
                     flatten: true,
                     cwd: '<%= c.bower %>/',
                     dest: '<%= c.dest %>/fonts/font-awesome/',
                     src: [
-                        'font-awesome/fonts/*'
+                    'font-awesome/fonts/*'
                     ]
-                }]
+                } ]
             }
         }
-    });
+    } );
 
-    grunt.registerTask('build', [
-        'less',
-        'autoprefixer',
-        'cssmin',
-        'bless',
-        'imagemin',
-        'copy'
-    ]);
+    grunt.registerTask( 'build', [
+    'less',
+    'autoprefixer',
+    'cssmin',
+    'bless',
+    'imagemin',
+    'copy'
+    ] );
 
-    grunt.registerTask('default', function () {
-        grunt.option('force', true);
+    grunt.registerTask( 'default', function() {
+        grunt.option( 'force', true );
 
-        grunt.task.run([
-            'build',
-            'watch'
-        ]);
-    });
+        grunt.task.run( [
+        'build',
+        'watch'
+        ] );
+    } );
 
-    grunt.registerTask('test', [
-        'jshint',
-        'jscs',
-        'build'
-    ]);
+    grunt.registerTask( 'test', [
+    'jshint',
+    'jscs',
+    'build'
+    ] );
 };
