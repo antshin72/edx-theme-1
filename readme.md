@@ -1,4 +1,4 @@
-# edx-theme
+### edx-theme
 
 [![Build Status](https://travis-ci.org/IONISx/edx-theme.svg?branch=master)](https://travis-ci.org/IONISx/edx-theme)
 [![Dependencies Status](https://david-dm.org/IONISx/edx-theme.svg)](https://david-dm.org/IONISx/edx-theme)
