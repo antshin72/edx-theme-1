@@ -14,8 +14,6 @@
 	padding:0px;
 	display: block;
 	width:100%;
-	background-size:100% 100%;
-	overflow: hidden;
 	position: relative;
 
 	&.parallax_index {
@@ -23,10 +21,22 @@
 	        padding-bottom:220px;
 	        //background: url("${static.url('themes/{theme_name}/images/img/bg.jpg'.format(theme_name=settings.THEME_NAME))}") no-repeat 50% 50%;
 		background: url("../images/img/bg.jpg") no-repeat 50% 50%;
+		background-size:100% 100%;
+		overflow: hidden;
+		
+		.slider {
+			position: absolute;
+			bottom: 20px;
+			left:49%;
+		}
 	}
 }
 .bg-info {
 	background-color:@color-info;
+}
+
+.courses-container {
+	margin-bottom:30px;
 }
 
 
