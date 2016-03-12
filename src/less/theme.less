@@ -2,6 +2,25 @@
 * EDX CAU Theme
 * chali5124@gmail.com
 */
+
+a {
+	font: inherit;
+	font-weight: 500;
+	letter-spacing: inherit;
+	padding: 0;
+	color: @color-primary;
+	text-transform: none;
+	border: 0 none;
+
+	&:hover {
+		color: @black;
+	}
+
+	&:focus {
+		color: @black;
+	}
+}
+
 .text-small {
 	font-size: 0.75em;
 }
@@ -42,9 +61,42 @@
 }
 
 
+// 모든 코스웨어의 타이틀을 재정의
+ .courses {
+	 .courses-listing-item {
+		.course {
+			.course-title
+			.course-title a,
+			.course-title span {
+				font-size:18px;
+				line-height: 1em;
+			}
+		}
+	}
+}
 
 
+// 코스상세 들어간 후 bootstrap의 클래스와 충돌하는 코드 리셋
+.wrapper-course-material {
+	height: auto;
+	margin-bottom: auto;
+	background-color: initial;
+	border-radius: 0px;
+	box-shadow:none;
+}
+.discussion-body {
+	.label {
+		line-height: 1;
+		white-space: nowrap;
+		text-align: left;
+		display: inline;
+		padding:0px;
+		font-size:normal;
+		color: inherit;
+		border-radius:0;
+	}
 
+}
 
 
 
