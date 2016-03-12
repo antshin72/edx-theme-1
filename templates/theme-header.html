@@ -14,22 +14,3 @@
 ## When unauthenticated, only show the about page link
 <%block name="navigation_global_links">
 </%block>
-
-
-
-% if settings.FEATURES.get('ENABLE_DASHBOARD_SEARCH'):
-<div id="dashboard-search-bar" class="search-bar dashboard-search-bar" role="search" aria-label="Dashboard">
-  <form>
-    <label for="dashboard-search-input">${_('Search Your Courses')}</label>
-    <div class="search-field-wrapper">
-      <input id="dashboard-search-input" type="text" class="search-field"/>
-      <button type="submit" class="search-button" aria-label="${_('Search')}">
-	<i class="icon fa fa-search" aria-hidden="true"></i>
-      </button>
-      <button type="button" class="cancel-button" aria-label="${_('Clear search')}">
-	<i class="icon fa fa-remove" aria-hidden="true"></i>
-      </button>
-    </div>
-  </form>
-</div>
-% endif
