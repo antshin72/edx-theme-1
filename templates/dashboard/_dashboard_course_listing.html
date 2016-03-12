@@ -58,7 +58,9 @@ from student.helpers import (
  % endif
 <article class="course${mode_class}">
   <% course_target = reverse('info', args=[unicode(course_overview.id)]) %>
+
   <section class="details">
+
     <div class="wrapper-course-image" aria-hidden="true">
       % if show_courseware_link:
         % if not is_course_blocked:
@@ -85,8 +87,10 @@ from student.helpers import (
         </span>
       % endif
     </div>
+
       <div class="wrapper-course-details">
-        <h3 class="course-title">
+
+	<h3 class="course-title">
           % if show_courseware_link:
             % if not is_course_blocked:
               <a data-course-key="${enrollment.course_id}" href="${course_target}">${course_overview.display_name_with_default_escaped}</a>
@@ -97,6 +101,7 @@ from student.helpers import (
             <span>${course_overview.display_name_with_default_escaped}</span>
           % endif
         </h3>
+
         <div class="course-info">
           <span class="info-university">${course_overview.display_org_with_default | h} - </span>
           <span class="info-course-id">${course_overview.display_number_with_default | h}</span>
@@ -114,6 +119,7 @@ from student.helpers import (
           % endif
           </span>
         </div>
+
         <div class="wrapper-course-actions">
           <div class="course-actions">
             % if show_courseware_link:
@@ -177,16 +183,20 @@ from student.helpers import (
                 % endif
               % endif
             % endif
+
             <div class="wrapper-action-more" data-course-key="${enrollment.course_id}">
-              <button type="button" class="action action-more" id="actions-dropdown-link-${dashboard_index}" aria-haspopup="true" aria-expanded="false" aria-controls="actions-dropdown-${dashboard_index}" data-course-number="${course_overview.number | h}" data-course-name="${course_overview.display_name_with_default_escaped | h}" data-dashboard-index="${dashboard_index}">
+
+	      <button type="button" class="action action-more" id="actions-dropdown-link-${dashboard_index}" aria-haspopup="true" aria-expanded="false" aria-controls="actions-dropdown-${dashboard_index}" data-course-number="${course_overview.number | h}" data-course-name="${course_overview.display_name_with_default_escaped | h}" data-dashboard-index="${dashboard_index}">
                 <span class="sr">${_('Course options for')}</span>
                 <span class="sr">&nbsp;
                   ${course_overview.display_name_with_default_escaped}
                 </span>
                 <i class="fa fa-cog" aria-hidden="true"></i>
               </button>
+
               <div class="actions-dropdown" id="actions-dropdown-${dashboard_index}" tabindex="-1">
-                <ul class="actions-dropdown-list" id="actions-dropdown-list-${dashboard_index}" aria-label="${_('Available Actions')}" role="menu">
+
+		<ul class="actions-dropdown-list" id="actions-dropdown-list-${dashboard_index}" aria-label="${_('Available Actions')}" role="menu">
                   % if can_unenroll:
                     <li class="actions-item" id="actions-item-unenroll-${dashboard_index}">
                     % if is_paid_course and show_refund_option:
@@ -270,12 +280,20 @@ from student.helpers import (
                     % endif
                   </li>
                 </ul>
+
               </div>
+
             </div>
+
           </div>
+
         </div>
+
       </div>
+
   </section>
+
+
   <footer class="wrapper-messages-primary">
     <ul class="messages-list">
       % if course_overview.may_certify() and cert_status:
