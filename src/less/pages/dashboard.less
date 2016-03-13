@@ -125,7 +125,13 @@
 			}
 		}
 
+
+
+
+
+
 		.listing-courses {
+
 			.course-item {
 				border: 0 none;
 				padding: 0;
@@ -160,6 +166,25 @@
 
 				&:last-child {
 					margin: 0;
+				}
+
+				/* 목록내 코스 재선언 */
+				.course {
+					.course-title,
+					.course-title a,
+					.course-title span {
+						margin:0;
+						line-height: 1em;
+						font-size:24px;
+					}
+
+					.wrapper-course-actions {
+
+						.wrapper-action-more {
+							line-height: 23.68px;
+						}
+					}
+
 				}
 
 				.cover {
