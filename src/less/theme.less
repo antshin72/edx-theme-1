@@ -80,20 +80,28 @@ a {
 	}
 }
 
-// 모든 코스웨어의 타이틀을 재정의
-//  .courses {
-// 	 .courses-listing-item {
-// 		.course {
-// 			.course-title,
-// 			.course-title a,
-// 			.course-title span {
-// 				font-size:18px;
-// 				line-height: 1em;
-// 				margin:0px 0px 10px 0px;
-// 			}
-// 		}
-// 	}
-// }
+/*모든 코스웨어의 타이틀을 재정의*/
+ .courses {
+	 .courses-listing-item {
+		 max-height: none;
+		.course {
+			.course-title,
+			.course-title a,
+			.course-title span {
+				// font-size:18px;
+				line-height: 1em;
+				// margin:0px 0px 10px 0px;
+			}
+		}
+	}
+}
+
+/* 메인페이지  */
+.highlighted-courses {
+	clear: both;
+	overflow: hidden;
+	margin-bottom: 0px;
+}
 
 
 // 코스상세 들어간 후 bootstrap의 클래스와 충돌하는 코드 리셋
