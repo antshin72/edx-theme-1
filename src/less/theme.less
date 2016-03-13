@@ -25,6 +25,10 @@ a {
 	font-size: 0.75em;
 }
 
+.no-margin {
+	margin: 0px;
+}
+
 .jumbotron {
 	background:#fff;
 }
@@ -60,21 +64,30 @@ a {
 	margin-bottom:30px;
 }
 
-
-// 모든 코스웨어의 타이틀을 재정의
- .courses {
-	 .courses-listing-item {
-		.course {
-			.course-title,
-			.course-title a,
-			.course-title span {
-				font-size:18px;
-				line-height: 1em;
-				margin:0px 0px 10px 0px;
-			}
-		}
+/* 강좌 상세보기 상단 메뉴 */
+.course-info{
+	header.course-profile {
+		height:auto;
+		margin:0px;
+		padding:40px 0px;
 	}
 }
+
+
+// 모든 코스웨어의 타이틀을 재정의
+//  .courses {
+// 	 .courses-listing-item {
+// 		.course {
+// 			.course-title,
+// 			.course-title a,
+// 			.course-title span {
+// 				font-size:18px;
+// 				line-height: 1em;
+// 				margin:0px 0px 10px 0px;
+// 			}
+// 		}
+// 	}
+// }
 
 
 // 코스상세 들어간 후 bootstrap의 클래스와 충돌하는 코드 리셋
