@@ -1,9 +1,41 @@
 <%! from django.utils.translation import ugettext as _ %>
 <%inherit file="../main.html" />
 
-<%block name="pagetitle">${_("Vision")}</%block>
+<%block name="pagetitle">CAUx 소개</%block>
 
-<div class="static-container about">
-	<h1>${_("Vision")}</h1>
-	<p>${_("This page left intentionally blank. It is not used by edx.org but is left here for possible use by installations of Open edX.")}</p>
+
+<div class="jumbotron parallax parallax_static" style="${static.url('themes/{theme_name}/images/static/bg.about.jpg">
+	<div class="container">
+		<div class="">About <span class="text-orange">U</span>s</div>
+	</div>
 </div>
+
+<section class="static-container contact">
+
+	<div class="static-container about">
+
+		<div class='page-section'>
+
+			<h1>CAUx는</h1>
+
+			<div class="description">
+			중앙대학교가 온라인을 통해 누구나, 어디서나, 원하는 강의를 무료로 들을 수 있도록 제공하는 MOOC형 온라인공개강좌입니다. <br/><br/>
+			중앙대학교는 의와 참의 정신을 대학의 교육이념으로 하고 있습니다. 진리를 탐구하고 실천적 참여봉사를 통해 사회 정의를 구현하고 국가와 인류공영에 기여하는 인재 양성을 목적으로 하고 있습니다.<br/><br/>
+			중앙대학교의 교육이념에 따라, CAUx를 통해 중앙대의 풍부한 경험과 지식을 공유하여 대중의 고등교육의 참여기회를 제공하는 실천적 역할에 최선을 다하고자 합니다. 특히 ‘문화적 상상력(cultural imagination)’을 갖춘 다빈치형 인재로 성장할 수 있도록 핵심 교육 분야인 융합, 인문, 예술, 공학 분야를 중심으로 과목을 공유하려고 합니다.
+			</div>
+		</div>
+
+		<div class='page-section'>
+
+			<h1>MOOC란 무엇인가요?</h1>
+
+			<div class="description">
+			MOOC(Massive Open Online Course)란 온라인을 통해서 누구나, 어디서나, 원하는 강의를 무료로 들을 수 있는 온라인 공개강좌 서비스를 말합니다.
+			MOOC는 학습자가 수동적으로 듣기만 하던 기존의 온라인 학습동영상과 달리 교수자와 학습자, 학습자와 학습자간 질의응답, 토론, 퀴즈, 과제 제출 등 양방향 학습이 가능한 새로운 교육 환경을 제공합니다. 아울러, 수강 인원의 제한 없이 누구나 수강이 가능하여, 학습자는 배경지식이 다른 학습자간 지식 공유를 통해 대학의 울타리를 넘어 새로운 학습경험을 하게 될 것입니다.
+			</div>
+		</div>
+
+
+	</div>
+
+</section>

@@ -4,27 +4,27 @@ module.exports = function( grunt ) {
     require( 'time-grunt' )( grunt );
     require( 'load-grunt-tasks' )( grunt );
 
-	var config = {
+    var config = {
         src: 'src',
         dest: 'static',
         bower: 'bower_components'
     };
 
-	grunt.initConfig( {
+    grunt.initConfig( {
         c: config,
 
-		// ## //
+        // ## //
 
-		watch: {
+        watch: {
             less: {
                 files: [ '<%= c.src %>/less/**/*.less' ],
                 tasks: [ 'less', 'autoprefixer', 'cssmin', 'bless' ]
             }
         },
 
-		// ## //
+        // ## //
 
-		jshint: {
+        jshint: {
             node: {
                 options: {
                     jshintrc: true

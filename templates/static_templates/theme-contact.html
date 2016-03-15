@@ -1,9 +1,40 @@
 <%! from django.utils.translation import ugettext as _ %>
 <%inherit file="../main.html" />
 
-<%block name="pagetitle">${_("Contact")}</%block>
+<%block name="pagetitle">About Us</%block>
 
-<section class="static-container contact">
-<h1>${_("Contact")}</h1>
-<p>${_("This page left intentionally blank. It is not used by edx.org but is left here for possible use by installations of Open edX.")}</p>
-</section>
+<div class="jumbotron parallax parallax_static" style="${static.url('themes/{theme_name}/images/static/bg.contact.jpg">
+	<div class="container">
+		<div class="">Contact <span class="text-orange">U</span>s</div>
+	</div>
+</div>
+
+<div class="static-container about">
+
+	<div class='page-section'>
+
+		<h1>중앙대학교 MOOC 서비스,<br/>CAUx 사용에 대한 문의사항이 있으신가요?</h1>
+
+		<div class="description">
+		현재 CAUx의 강좌를 수강하여 학습하고 계신가요?<br/>
+		강좌 내용에 대하여 궁금하신 부분, 제안 사항 또는 잘못된 정보가 있다면, 강좌의 포럼 게시판을 이용하여 교수와 강좌 운영자에게 직접 문의해 보십시오.<br/><br/>
+		강좌 이외에 다른 도움이 필요하시다면, 아래 이메일로 연락 주십시오.
+		</div>
+
+	</div>
+
+
+	<div class="page-section page-section-contact" style"background-image:url('${static.url('themes/{theme_name}/images/static/bg.contactl.bock.jpg');">
+
+		<h4>CAUx 문의사항:  help@caux.com</h4>
+
+		<ul class="list-unstyled">
+			<li>- 가입 처리가 진행되지 않거나, 확인 메일을 수신하지 못한 경우</li>
+			<li>- 웹사이트 및 특정 페이지에 접속이 불가한 경우</li>
+			<li>- 서비스를 악용하고 있는 불량 사용자가 있는 경우</li>
+		</ul>
+	</div>
+
+
+
+</div>
