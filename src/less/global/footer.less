@@ -2,7 +2,7 @@ footer.global {
 	background-color: @color-background;
 	font-size: 0.9em;
 	color: @text-gray;
-	padding: 20px 0;
+	padding: 40px 0 30px;
 	overflow: hidden;
 
 	.footer-container {
@@ -34,8 +34,8 @@ footer.global {
 			}
 
 			a {
-				color: @text-gray;
-				font-size:15px;
+				color:#545454;
+				font-size:14px;
 				&:hover {
 
 				}
@@ -45,6 +45,7 @@ footer.global {
 
 	.copyright {
 		margin: 5px 0px;
+		font-size: 12px;
 
 		.text-small {
 			margin-top: 10px;
@@ -63,10 +64,35 @@ footer.global {
 			margin: 0;
 		}
 
-		img {
-			// height: 50px;
-			margin-bottom: 10px;
-			height: 37px;
+		a {
+			display: inline-block;
+			width: 195px;
+			height: 35px;
+			margin-bottom: 8px;
+			font-size: 12px;
+			color: #5f5f5f;
+			letter-spacing: -0.05em;
+			line-height: 35px;
+			text-align: center;
+			border: 1px solid #ddd;
+			background: #f4f4f4;
+			transition: all .1s ease-in;
+
+			&:hover {
+				border-color:#000;
+			}
 		}
+
+		.text-small {
+			font-size: 10px;
+			color: #8c8c8c;
+			letter-spacing: -0.05em;
+		}
+
+		// img {
+		// 	// height: 50px;
+		// 	margin-bottom: 10px;
+		// 	height: 37px;
+		// }
 	}
 }
