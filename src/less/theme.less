@@ -55,7 +55,6 @@ a {
 	}
 
 	&.parallax_static {
-
 		background-repeat: no-repeat;
 		background-position: 50% 50%;
 		background-size:100% 100%;
@@ -164,27 +163,25 @@ a {
 		font-size:36px;
 		color:#0066cc;
 		margin-bottom: 15px;
+		border-bottom: 0 none;
+		padding-bottom: 20px;
 	}
 
 	.description {
+		line-height: 1.8em;
+		text-align: justify;
 		font-size:16px;
 		margin-bottom: 15px;
+		padding-left: 10px;
 	}
 
 	&.page-section-contact {
-		width:1101px;
+		background-repeat: no-repeat;
+		background-size: 100% 100%;
 		margin:0 auto;
-		padding: 50px 0px 0px 350px;
+		margin-bottom: 30px;
+		padding: 80px 0px 0px 350px;
 		height:253px;
-
-		// .page-section-block {
-		// 	width:200px;
-		// 	text-align: center;
-		// 	vertical-align: middle;
-		// 	padding:50px 0px;
-		// 	border-left:solid 1px @color-border;
-		// }
-
 	}
 }
 
@@ -197,4 +194,10 @@ a {
 
 .static-container {
 	height: 100%;
+	position: relative;
+}
+
+.list-unstyled,
+.list-unstyled li {
+	 list-style:none;
 }
