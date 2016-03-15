@@ -1,10 +1,9 @@
 <%! from django.utils.translation import ugettext as _ %>
-<%namespace name='static' file='static_content.html'/>
 <%inherit file="../main.html" />
 
 <%block name="pagetitle">${_("FAQ")}</%block>
 
-<div class="jumbotron parallax parallax_static"  style="background-image:url('${static.url('themes/{theme_name}/images/static/bg.faq.jpg'.format(theme_name=settings.THEME_NAME))}');">
+<div class="jumbotron parallax parallax_static"  style="background-image:url('/static/themes/iocaux/images/static/bg.faq.jpg');">
 	<div class="container">
 		<div class="">FAQ</div>
 	</div>
