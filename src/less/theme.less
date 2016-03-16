@@ -43,7 +43,6 @@ a {
 	&.parallax_index {
 	        padding-top:150px;
 	        padding-bottom:220px;
-	        //background: url("${static.url('themes/{theme_name}/images/img/bg.jpg'.format(theme_name=settings.THEME_NAME))}") no-repeat 50% 50%;
 		background: url("../images/img/bg.jpg") no-repeat 50% 50%;
 		background-size:100% 100%;
 
@@ -104,9 +103,7 @@ a {
 			.course-title,
 			.course-title a,
 			.course-title span {
-				// font-size:18px;
 				line-height: 1em;
-				// margin:0px 0px 10px 0px;
 			}
 		}
 	}
@@ -201,16 +198,18 @@ a {
 	 list-style:none;
 }
 
-/* Wiki */
 section.wiki {
+
+	.global-functions {
+		margin-top:15px;
+	}
 
 	.wiki-wrapper {
 
 		.breadcrumb {
-			> li,
-			+ li:before {
+			> li + li:before {
 				padding:0px;
-				content: '';
+				content: none;
 			}
 		}
 
@@ -223,9 +222,9 @@ section.wiki {
 
 		.form-horizontal {
 	 		.control-label {
+				font-family: "나눔고딕", "Nanum Gothic";
 	 			text-align: left;
 	 			margin-bottom: inherit;
-	 			padding-top: 0px;
 				margin-bottom: 0px;
 	 		}
 	 	}
@@ -235,6 +234,10 @@ section.wiki {
 				border-bottom:0 none;
 				li {
 					float: none;
+					a {
+						border-radius: 0;
+						border: 0 none;
+					}
 				}
 			}
 		}
