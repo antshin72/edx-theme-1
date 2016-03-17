@@ -7,50 +7,105 @@
 <%! from microsite_configuration import microsite %>
 
 <%
-  homepage_overlay_html = microsite.get_value('homepage_overlay_html')
+homepage_overlay_html = microsite.get_value('homepage_overlay_html')
 
-  show_homepage_promo_video = microsite.get_value('show_homepage_promo_video', True)
-  homepage_promo_video_youtube_id = microsite.get_value('homepage_promo_video_youtube_id', "XNaiOGxWeto")
+show_homepage_promo_video = microsite.get_value('show_homepage_promo_video', True)
+homepage_promo_video_youtube_id = microsite.get_value('homepage_promo_video_youtube_id', "XNaiOGxWeto")
 
-  show_partners = microsite.get_value('show_partners', True)
+show_partners = microsite.get_value('show_partners', True)
 
 %>
 
 <section class="home bg-white">
 
-	<div class="jumbotron parallax parallax_index">
-		<div class="container">
-			<img src="${static.url('themes/{theme_name}/images/img/t4.png'.format(theme_name=settings.THEME_NAME))}" class="img">
-			<img src="${static.url('themes/{theme_name}/images/img/m8.png'.format(theme_name=settings.THEME_NAME))}" class="img slider">
+	<!--// 상단 Carousel //-->
+	<div class="jumbotron">
+
+		<div id="zfp-carousel" class="carousel slide" data-ride="carousel">
+			<!-- Indicators -->
+			<ol class="carousel-indicators">
+				<li data-target="#zfp-carousel" data-slide-to="0" class="active"></li>
+				<li data-target="#zfp-carousel" data-slide-to="1" class=""></li>
+			</ol>
+
+			<div class="carousel-inner" role="listbox">
+				<div class="item active">
+					<a href="#" style="background-image:url('${static.url('themes/{theme_name}/images/img/bg1.jpg'.format(theme_name=settings.THEME_NAME))}')">
+						<!-- <img src="" alt="중앙대학교 석학들이 묻습니다. 당신의 인생의 길은 어디를 향하고 있나요? CAUx와 함께 길을 찾아볼까요?"> -->
+						<div class="fst">
+							<p class="red">중앙대학교 석학들이 묻습니다.</p>
+							<p>
+								당신의 인생의 길은 <span>어디를 향하고 있나요?</span>
+							</p>
+							<p>CAUx와 함께 길을 찾아볼까요?</p>
+						</div>
+					</a>
+				</div>
+				<div class="item">
+					<a href="#" style="background-image:url('${static.url('themes/{theme_name}/images/img/bg2.jpg'.format(theme_name=settings.THEME_NAME))}')">
+						<!-- <img src="../images/main/img-main2.jpg" alt="open your future 미래를 여는 창"> -->
+						<div class="sec">
+							<p>
+								open your future <span>미래를 여는 창</span>
+							</p>
+						</div>
+					</a>
+				</div>
+			</div>
 		</div>
+
 	</div>
+	<script type="text/javascript">
+	$(document).ready(function() {
+	    	$('#zfp-carousel').carousel();
+	});
+	</script>
 
 
+
+	<!--// 중단 MOOC소개 //-->
 	<div  class="jumbotron">
 
 		<div class="container">
 
-			<div class="row">
-
-				<div class="col-md-12 text-center">
-					<img class="img" src="${static.url('themes/{theme_name}/images/img/t1.png'.format(theme_name=settings.THEME_NAME))}">
-				</div>
-
-			</div>
+			<h2>중앙대학교의 MOOC 서비스 CAUx를 소개합니다.</h2>
 
 			<div class="row">
 
 				<div class="col-md-3 text-center">
-					<img class="img" src="${static.url('themes/{theme_name}/images/img/m1.png'.format(theme_name=settings.THEME_NAME))}">
+					<a href="#" class="index-object">
+						<img class="img" src="${static.url('themes/{theme_name}/images/img/ico-caux1.png'.format(theme_name=settings.THEME_NAME))}">
+						<strong><small>무료로 배우는 즐거움</small></strong>
+						<p class="text-gray">아무 것도 필요하지 않습니다.</p>
+						<p class="text-gray">무료로 중앙대학교 최고 유명 교수님의</p>
+						<p class="text-gray">고품질 강의를 학습하세요.</p>
+					</a>
 				</div>
 				<div class="col-md-3 text-center">
-					<img class="img" src="${static.url('themes/{theme_name}/images/img/m2.png'.format(theme_name=settings.THEME_NAME))}">
+					<a href="#" class="index-object">
+						<img class="img" src="${static.url('themes/{theme_name}/images/img/ico-caux2.png'.format(theme_name=settings.THEME_NAME))}">
+						<strong><small>전문가가 검증한 인증서</small></strong>
+						<p class="text-gray">중앙대학교의 교수 및 튜터가</p>
+						<p class="text-gray">검증하여 학생 개인의 학습 결과를</p>
+						<p class="text-gray">인정한 인증서를 발급합니다.</p>
+					</a>
 				</div>
 				<div class="col-md-3 text-center">
-					<img class="img" src="${static.url('themes/{theme_name}/images/img/m3.png'.format(theme_name=settings.THEME_NAME))}">
+					<a href="#" class="index-object">
+						<img class="img" src="${static.url('themes/{theme_name}/images/img/ico-caux3.png'.format(theme_name=settings.THEME_NAME))}">
+						<strong><small>유명 강의를 한 눈에!</small></strong>
+						<p class="text-gray">중앙대학교의 자랑인</p>
+						<p class="text-gray">인기 강의들이</p>
+						<p class="text-gray">계속 업데이트됩니다.</p>
+					</a>
 				</div>
 				<div class="col-md-3 text-center">
-					<img class="img" src="${static.url('themes/{theme_name}/images/img/m4.png'.format(theme_name=settings.THEME_NAME))}">
+					<a href="#" class="index-object">
+						<img class="img" src="${static.url('themes/{theme_name}/images/img/ico-caux4.png'.format(theme_name=settings.THEME_NAME))}">
+						<strong><small>지속적인 학습 관리</small></strong>
+						<p class="text-gray">과정별로 나의 학습과정을</p>
+						<p class="text-gray">체계적으로 확인하세요.</p>
+					</a>
 				</div>
 
 			</div>
@@ -59,60 +114,82 @@
 
 	</div>
 
-
+	<!--// 중단 강의목록 //-->
 	<div class="jumbotron bg-info">
-
-		<div class="container courses-container">
-
-			<div class="highlighted-courses">
-
-				% if settings.FEATURES.get('COURSES_ARE_BROWSABLE'):
-				<section class="courses">
-					<ul class="courses-listing">
-						%for course in courses:
-						<li class="courses-listing-item">
-							<%include file="course.html" args="course=course" />
-						</li>
-						%endfor
-					</ul>
-				</section>
-				% endif
-
-			</div>
-
-			<div class="row">
-				<div class="col-md-12 text-center">
-					<a href="/courses"><img class="img" src="${static.url('themes/{theme_name}/images/img/b1.png'.format(theme_name=settings.THEME_NAME))}"></a>
-				</div>
-
-			</div>
-		</div>
-
-	</div>
-
-
-	<div class="jumbotron">
 
 		<div class="container">
 
 			<div class="row">
 
-				<div class="col-md-12 text-center" style="margin-bottom:40px;">
-					<img class="img" src="${static.url('themes/{theme_name}/images/img/t2.png'.format(theme_name=settings.THEME_NAME))}">
+				<div class="col-md-4">
+					<a href="#" class="index-object">
+						<img class="img" alt="건축과 문화" src="${static.url('themes/{theme_name}/images/img/img-course1.jpg'.format(theme_name=settings.THEME_NAME))}">
+						<strong class="text-white">건축과 문화</strong>
+						<p class="text-blue">건축은 일상적인 우리의 삶과 행위를</p>
+						<p class="text-blue">담아내는 공간입니다.</p>
+						<p class="text-blue">우리를 둘러싼 공간을 어떻게 바라볼 것인지...</p>
+					</a>
+				</div>
+				<div class="col-md-4 text-center">
+					<a href="#" class="index-object">
+						<img class="img" alt="기초 프로그래밍" src="${static.url('themes/{theme_name}/images/img/img-course2.jpg'.format(theme_name=settings.THEME_NAME))}">
+						<strong class="text-white">기초 프로그래밍</strong>
+						<p class="text-blue">C언어 개론 및 문법을 배우고</p>
+						<p class="text-blue">기초 수준의 C 프로그래밍 기법에 대해</p>
+						<p class="text-blue">쉽게 배워봅시다.</p>
+					</a>
+				</div>
+				<div class="col-md-4 text-center">
+					<a href="#" class="index-object">
+						<img class="img" alt="동양문화와 스토리텔링" src="${static.url('themes/{theme_name}/images/img/img-course3.jpg'.format(theme_name=settings.THEME_NAME))}">
+						<strong class="text-white">동양문화와 스토리텔링</strong>
+						<p class="text-blue">인도권, 동아시아권, 이슬람권 등의</p>
+						<p class="text-blue">동양 문화에서 스토리텔링이 생산되어 온 과정에</p>
+						<p class="text-blue">대해 체계적으로 이해합니다.</p>
+					</a>
 				</div>
 
 			</div>
 
+			<a href="/courses" class="more">전체 강의 보기</a>
+
+		</div>
+	</div>
+
+
+	<!--// 하단 학습서비스 소개 //-->
+	<div class="jumbotron">
+
+		<div class="container">
+
+			<h2>중앙대학교의 학습 서비스가 궁금하신가요?</h2>
+
 			<div class="row">
 
 				<div class="col-md-4 text-center">
-					<img class="img" src="${static.url('themes/{theme_name}/images/img/m5.png'.format(theme_name=settings.THEME_NAME))}">
+					<a href="#" class="index-object">
+						<img class="img" src="${static.url('themes/{theme_name}/images/img/ico-service1.png'.format(theme_name=settings.THEME_NAME))}">
+						<strong>OCW</strong>
+						<p>무료 강의 동영상을 확인하세요.</p>
+						<p>중앙대학교에서 제공하는</p>
+					</a>
 				</div>
 				<div class="col-md-4 text-center">
-					<img class="img" src="${static.url('themes/{theme_name}/images/img/m6.png'.format(theme_name=settings.THEME_NAME))}">
+					<a href="#" class="index-object">
+						<img class="img" src="${static.url('themes/{theme_name}/images/img/ico-service2.png'.format(theme_name=settings.THEME_NAME))}">
+						<strong>Open Education</strong>
+						<p>중앙대학교에서 개발하고 운영되고 있던</p>
+						<p>강의 콘텐츠와 신규 강의를 전 세계로</p>
+						<p>확대하여 서비스합니다.</p>
+					</a>
 				</div>
 				<div class="col-md-4 text-center">
-					<img class="img" src="${static.url('themes/{theme_name}/images/img/m7.png'.format(theme_name=settings.THEME_NAME))}">
+					<a href="#" class="index-object">
+						<img class="img" src="${static.url('themes/{theme_name}/images/img/ico-service3.png'.format(theme_name=settings.THEME_NAME))}">
+						<strong>중앙대학교 SNS</strong>
+						<p>페이스북을 통해 중앙대학교의</p>
+						<p>소식을 받아보세요.</p>
+					</a>
 				</div>
 
 			</div>
@@ -123,19 +200,19 @@
 </section>
 
 <%block name="js_extra">
-   <script type="text/javascript">
-      $(window).load(function() {
-         if(getParameterByName('next')) {
-              $('#login').trigger("click");
-         }
-      })
-   </script>
+<script type="text/javascript">
+$(window).load(function() {
+	if(getParameterByName('next')) {
+		$('#login').trigger("click");
+	}
+})
+</script>
 </%block>
 
 % if show_signup_immediately is not UNDEFINED:
-  ## NOTE: This won't work in production, because anonymous views are cached, so it will
-  ## show either with or without this extra js for 3 minutes at a time.
+## NOTE: This won't work in production, because anonymous views are cached, so it will
+## show either with or without this extra js for 3 minutes at a time.
 <script type="text/javascript">
-  $(window).load(function() {$('#signup_action').trigger("click");});
+$(window).load(function() {$('#signup_action').trigger("click");});
 </script>
 % endif
