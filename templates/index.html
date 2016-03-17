@@ -27,28 +27,22 @@ show_partners = microsite.get_value('show_partners', True)
 		</ol>
 
 		<div class="carousel-inner" role="listbox">
-			<div class="item active">
-				<a href="#" style="background-image:url('${static.url('themes/{theme_name}/images/img/bg1.jpg'.format(theme_name=settings.THEME_NAME))}')">
-					<!-- <img src="" alt="중앙대학교 석학들이 묻습니다. 당신의 인생의 길은 어디를 향하고 있나요? CAUx와 함께 길을 찾아볼까요?"> -->
-					<div class="fst">
-						<p class="red">중앙대학교 석학들이 묻습니다.</p>
-						<p>
-							당신의 인생의 길은 <span>어디를 향하고 있나요?</span>
-						</p>
-						<p>CAUx와 함께 길을 찾아볼까요?</p>
-					</div>
-				</a>
-			</div>
-			<div class="item">
-				<a href="#" style="background-image:url('${static.url('themes/{theme_name}/images/img/bg2.jpg'.format(theme_name=settings.THEME_NAME))}')">
-					<!-- <img src="../images/main/img-main2.jpg" alt="open your future 미래를 여는 창"> -->
-					<div class="sec">
-						<p>
-							open your future <span>미래를 여는 창</span>
-						</p>
-					</div>
-				</a>
-			</div>
+			<a class="item active" style="background-image:url('${static.url('themes/{theme_name}/images/img/bg1.jpg'.format(theme_name=settings.THEME_NAME))}')">
+				<div class="fst">
+					<p class="red">중앙대학교 석학들이 묻습니다.</p>
+					<p>
+						당신의 인생의 길은 <span>어디를 향하고 있나요?</span>
+					</p>
+					<p>CAUx와 함께 길을 찾아볼까요?</p>
+				</div>
+			</a>
+			<a href="#" class="item" style="background-image:url('${static.url('themes/{theme_name}/images/img/bg2.jpg'.format(theme_name=settings.THEME_NAME))}')">
+				<div class="sec">
+					<p>
+						open your future <span>미래를 여는 창</span>
+					</p>
+				</div>
+			</a>
 		</div>
 	</div>
 
